@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="data"
+            type="com.appturbo.cavista.repository.model.response.Data" />
+    </data>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/margin_70">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/lay_item_grid_card"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:cardUseCompatPadding="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:weightSum="1">
+
+                <ImageView
+                    android:id="@+id/lay_item_grid_img_display"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.8"
+
+                    android:scaleType="centerCrop"
+                    android:src="@color/colorBlack" />
+
+                <TextView
+                    android:id="@+id/lay_item_grid_tv_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.2"
+                    android:fontFamily="@font/nunito_semi_bold"
+                    android:gravity="center"
+                    android:padding="@dimen/margin_2"
+                    android:singleLine="true"
+                    android:text="@{data.title}" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+</layout>
